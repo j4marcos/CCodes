@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <h2>qual é seu pais?</h2>
+    <input type="" id="inputpais">
+    <input type="button" value="verificar" onclick="verif()">
+    <div class="resp">
+        <div class="123">oi</div>
+    </div>
+
+    <script>
+        var pais = document.querySelector('input#inputpais')
+        var resp = document.getElementsByClassName('resp')[0]
+var sinal = document.getElementsByClassName('123')[0].innerHTML
+
+function verif() {
+    console.log(sinal)
+
+if (pais.value == 'brasil') {
+    resp.innerHTML = ('huehue br!')
+} else {
+    resp.innerHTML = ('é gringo...')
+}
+}
+    </script>
+</body>
+</html>

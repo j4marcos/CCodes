@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .sinal {
+            margin: 50px;
+            width: 350px;
+            height: 50px;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+    <title>condições</title>
+</head>
+
+<body>
+    <h1>DETRAN</h1>
+    <h2>sistema de multas</h2>
+    velocidade do carro: <input type="number" name="" id="velinput">
+    <input type="button" value="verificar" onclick="ver()">
+    <div id="msg"></div>
+        <div class="sinal" id="123">!</div>
+
+    <script>
+
+        function ver() {
+            var velinput = Number(window.document.getElementById('velinput').value)
+            var sinal = document.getElementById('123')
+
+            document.querySelector('div#msg').innerText = `sua velocidade é de ${velinput}Km/h `
+            document.querySelector('div#msg').style.margin = '15px'
+
+            if (velinput > 60) {
+                sinal.style.backgroundColor = 'red'
+                sinal.innerText = 'receba essa multa nos peito!'
+
+            } else {
+                sinal.innerText = "ta tranquilo"
+                sinal.style.backgroundColor = 'green'
+            }
+        }
+    </script>
+</body>
+
+</html>

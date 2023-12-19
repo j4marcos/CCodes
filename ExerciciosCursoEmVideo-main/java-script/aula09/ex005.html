@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset=" UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(38, 35, 54);
+            color: rgb(223, 223, 223);
+            font: normal 15pt arial;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>estudando o DOM</h1>
+    <p>aqui vai o resultado do palagrafo 1</p>
+    <p>usando o <strong><abbr title="Document Object Model">DOM</abbr></strong> em JavaScript.</p>
+    <div  class="botao" >clique em mim</div>
+    <p id="msg">testando query selector</p>
+
+
+    <script>
+    
+
+        document.getElementsByTagName('h1')[0].innerText = "codando"
+  window.document.getElementsByTagName('strong')[0].innerText = "Document Object Model"
+
+var p1 = document.getElementsByTagName('p')[0]
+p1.style.color = 'white'
+p1.innerText = 'trocando'
+p1.style.fontSize = "30px"
+p1.innerText = p1.innerText.toLocaleUpperCase()
+p1.innerText += "!"
+p1.style.backgroundColor = 'black'
+
+  var click = document.querySelector('div.botao')
+
+  click.style.color = "red"
+
+  var msg = document.querySelector("p#msg")
+
+  msg.style.color = 'blue'
+
+
+    </script>
+
+</body>
+
+</html>
